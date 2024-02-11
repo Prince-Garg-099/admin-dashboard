@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:3000/user';
+  // private apiUrl = 'http://localhost:3000/user';
+  private apiUrl = 'https://mevamart-server.onrender.com/user';
  updateUser(updatedUser: any): Observable<any> {
     const url = `${this.apiUrl}/${updatedUser._id}`;
     return this.http.put<any>(url, updatedUser);

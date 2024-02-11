@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:3000/product';
+  // private apiUrl = 'http://localhost:3000/product';
+  private apiUrl = 'https://mevamart-server.onrender.com/product';
+
   constructor(private http:HttpClient) { }
 
 
