@@ -1,0 +1,92 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Product Inventory</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive" >
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Product Id
+                </th>
+                <th>
+                  Image
+                 </th>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Description
+                </th>
+                <th>
+                  Category
+                </th>
+                <th>
+                  MRP
+                </th>
+                <th>
+                  ListingPrice
+                </th>
+                <th>
+                 Discount%
+                </th>
+                <th>
+                  Availability
+                 </th>
+                 <th>
+                  CurrentStock
+                 </th>
+                 <th>
+                  Action
+              </th>  
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of allproducts;">
+                  <td>
+                  {{product._id}}
+                  </td>
+                  <td>
+                    {{product.productName}}
+                  </td>
+                  <td>
+                   {{product.productName}}
+                  </td>
+                  <td>
+                    {{product.description}}
+                  </td>
+                  <td>
+                   {{product.category}}
+                  </td>
+                  <td>
+                    {{product.mrp}}
+                   </td>
+                   <td>
+                    {{product.listingPrice}}
+                   </td>
+                   <td>
+                    {{product.discount}}
+                   </td>
+                   <td>
+                    {{product.availabilityStatus}}
+                   </td>
+                   <td>
+                    {{product.currentStock}}
+                   </td>
+                  <td style="display: flex;">
+                    <button style=" margin-right: 10px;background-color: rgb(107, 247, 107); " (click)="editProduct(product)"><i class="fa fa-edit"></i></button>
+                  <button style="background-color: rgb(255, 121, 121);" (click)="deleteProduct(product._id)"><i class="fa fa-trash-alt"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

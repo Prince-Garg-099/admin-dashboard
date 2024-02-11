@@ -1,0 +1,22 @@
+/* your-component.component.css */
+
+.table-header {
+    background-color: #3498db; /* Blue color for the header background */
+    color: #fff; /* White text color for the header */
+  }
+  
+  .table-row {
+    background-color: #ecf0f1; /* Light gray color for alternating rows */
+  }
+  
+  .action-button {
+    background-color: #2ecc71; /* Green color for action button */
+    color: #fff; /* White text color for the button */
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+
+  .mat-dialog-container{
+background-color: black;
+  }

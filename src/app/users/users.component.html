@@ -1,0 +1,54 @@
+<!-- your-component.component.html -->
+
+<div class="panel-header panel-header-sm">
+  <!-- Add styles if needed -->
+</div>
+
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header table-header">
+          <h4 class="card-title"> Users</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <th>
+                  User Id
+                </th>
+                <th>
+                  Name
+                </th>
+                <th>
+                  EmailAddress
+                </th>
+                <th>
+                  Gender
+                </th>
+                <th>
+                  ContactNo
+                </th>
+                <th>
+                  Action
+                </th>
+              </thead>
+              <tr *ngFor="let user of allusers;" >
+                <td>{{ user._id }}</td>
+                 <td>{{ user.firstName + ' '+ user.lastName }}</td>
+                <td>{{ user.emailAddress }}</td>
+                 <td >{{ user.gender }}</td>
+               <td>{{ user.contactNumber }}</td>
+                <td>
+                  <button style=" margin-right: 10px;background-color: rgb(107, 247, 107); " (click)="editUser(user)"><i class="fa fa-edit"></i></button>
+                  <button style="background-color: rgb(255, 121, 121);" (click)="deleteUser(user._id)"><i class="fa fa-trash-alt"></i></button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

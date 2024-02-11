@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Edit User</h1>
+<div mat-dialog-content>
+  <!-- Your form fields for editing user details go here -->
+  <!-- Example: -->
+  <input  type="text" [(ngModel)]="data.user.firstName" placeholder="First Name">
+  <input type="text" [(ngModel)]="data.user.lastName" placeholder="Last Name">
+  <input type="text" [(ngModel)]="data.user.emailAddress" placeholder="emailAddress">
+  <input type="text" [(ngModel)]="data.user.contactNumber" placeholder="contactNumber">
+  <!-- Add more fields as needed -->
+</div>
+<div mat-dialog-actions>
+  <button class="btn-cancel" mat-button (click)="onNoClick()">Cancel</button>
+  <button class="btn-save" mat-button [mat-dialog-close]="data.user" cdkFocusInitial>Save</button>
+</div>

@@ -1,0 +1,78 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Orders</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Id
+                </th>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Contact No.
+                </th>
+                <th>
+                  Estimated Delivery Date
+                </th>
+                <th>
+                  Address
+                </th>
+                <th>
+                  View Products
+                </th>
+                <th>
+                 Status
+                </th>
+                <th>
+                 Bill Amount Rs
+                </th>
+                <th>
+                  Action
+              </th> 
+              </thead>
+              <tbody>
+                <tr *ngFor="let order of allorders;">
+                  <td>
+                    {{order._id}}
+                  </td>
+                  <td>
+                    {{order.name}}
+
+                  </td>
+                  <td>
+                    {{order.contactNumber}}
+                  </td>
+                  <td>
+                    {{order.orderedTime}}
+                  </td>
+                  <td>
+                    {{order.address}}
+                  </td>
+                  <td >
+                    {{order.orderedProducts}}
+                  </td>
+                  <td >
+                    {{order.orderStatus}}
+                  </td>
+                  <td style="display: flex;">
+                    <button style=" margin-right: 10px;background-color: rgb(107, 247, 107); " (click)="editOrder(order)"><i class="fa fa-edit"></i></button>
+                  <button style="background-color: rgb(255, 121, 121);" (click)="deleteOrder(order._id)"><i class="fa fa-trash-alt"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

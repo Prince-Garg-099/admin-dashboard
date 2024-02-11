@@ -1,0 +1,26 @@
+.button-container {
+    display: flex;
+  }
+  
+  .edit-button, .delete-button {
+    margin-right: 10px;
+    background-color: rgb(107, 247, 107);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    vertical-align:middle;
+
+  }
+  
+  .edit-button:hover, .delete-button:hover {
+    background-color: #def9de;
+  }
+  
+  .delete-button {
+    background-color: rgb(255, 121, 121);
+  }
+  
+  .delete-button:hover {
+    background-color: #efdfdf;
+  }
+  

@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Edit Product</h1>
+<div mat-dialog-content>
+  <!-- Your form fields for editing user details go here -->
+  <!-- Example: -->
+  <input  type="text" [(ngModel)]="data.product.productName" placeholder="productName">
+  <input type="text" [(ngModel)]="data.product.description" placeholder="description">
+  <input type="text" [(ngModel)]="data.product.category" placeholder="category">
+  <input type="text" [(ngModel)]="data.product.mrp" placeholder="mrp">
+  <input type="text" [(ngModel)]="data.product.listingPrice" placeholder="listingPrice">
+  <input type="text" [(ngModel)]="data.product.discount" placeholder="discount %">
+  <input type="text" [(ngModel)]="data.product.availabilityStatus" placeholder="availabilityStatus">
+  <input type="text" [(ngModel)]="data.product.currentStock" placeholder="currentStock">
+  <!-- Add more fields as needed -->
+</div>
+<div mat-dialog-actions>
+  <button class="btn-cancel" mat-button (click)="onNoClick()">Cancel</button>
+  <button class="btn-save" mat-button [mat-dialog-close]="data.product" cdkFocusInitial>Save</button>
+</div>
